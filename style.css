@@ -1,0 +1,18 @@
+:root{
+    --arrayWidth: 630px;
+}
+
+.array{
+    display: flex;
+    flex-Wrap: wrap;
+    width: var(--arrayWidth);
+    margin: auto;
+}
+
+.square{
+    margin: 5px;
+}
+
+h1, h3{
+    text-align: center;
+}

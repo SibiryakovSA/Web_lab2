@@ -4,8 +4,8 @@ let startSquaresCount = 2;                              //количество �
 let arrayLineSize = startSquaresCount;                  //количество квадратов в линии
 let arrayDivWidth = 630;                                //размер дива для массивов в пикселях
 
-let score;
-let timerDOM;
+let score = document.getElementsByTagName("h1")[0];;
+let timerDOM = document.getElementsByTagName("h3")[0];
 let timer;
 let timerCounter = 0;
 
@@ -19,8 +19,8 @@ window.onload = function(){
     timer = setInterval(function(){
         timerCounter++;
         timerDOM.textContent = `Оставшееся время: ${10 - timerCounter} секунд`;
-        if (timerCounter == 10)
-            LoseEvent();
+        //if (timerCounter == 10)
+          //  LoseEvent();
         
     }, 1000)
 }
@@ -28,18 +28,18 @@ window.onload = function(){
 
 var init = function(){
 
-    score = document.createElement("h1");
+    //score = document.createElement("h1");
     score.textContent = `Результат: ${arrayLineSize - startSquaresCount}`;
 
-    timerDOM = document.createElement("h3");
+    //timerDOM = document.createElement("h3");
     timerDOM.textContent = `Оставшееся время: ${10 - timerCounter} секунд`;
 
 
     array = document.createElement("div");
     array.className = "array";
-    array.style.width = `${arrayDivWidth}px`;
-    array.style.display = "flex";
-    array.style.flexWrap = "wrap";
+    //array.style.width = `${arrayDivWidth}px`;
+    //array.style.display = "flex";
+    //array.style.flexWrap = "wrap";
     createSquares();
 
 }
@@ -59,7 +59,7 @@ var createSquares = function(){
         var lengthPX = (arrayDivWidth - arrayLineSize * 10) / arrayLineSize;
         square.style.width = `${lengthPX}px`;
         square.style.height = `${lengthPX}px`;
-        square.style.margin = "5px";
+        //square.style.margin = "5px";
         square.onclick = LoseEvent;
         array.append(square);
         
