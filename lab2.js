@@ -40,10 +40,6 @@ var init = function(){
     array.style.width = `${arrayDivWidth}px`;
     array.style.display = "flex";
     array.style.flexWrap = "wrap";
-    //array.style.position = "absolute";
-    //array.style.right = "10px";
-    //array.style.marginRight = "0px";
-    //array.style.marginLeft = "auto";
     createSquares();
 
 }
